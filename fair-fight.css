@@ -1,0 +1,11 @@
+/* Fair-fight presentation: equal HP, readable win condition, grounded boxer styling. */
+.arena-hud::after { content:'FAIR ROUND · FIRST HP TO 0 LOSES'; position:absolute; top:72px; left:50%; transform:translateX(-50%); white-space:nowrap; color:#d8c9a3; font-size:.47rem; letter-spacing:.08em; }
+.arena-health label::after { content:' HP'; color:#9c947f; font-size:.48rem; }
+.arena-boxer { filter:saturate(.78) contrast(1.08); box-shadow:inset -8px 0 #552b32, 0 7px 0 #0d0f13; }
+.arena-boxer::before { box-shadow:inset 5px -5px #764631; }
+.arena-boxer.p1 { background:linear-gradient(90deg,#4d2b32 0 12%,#a94f4d 13% 68%,#71353d 69%); }
+.arena-boxer.p2 { background:linear-gradient(90deg,#1d4354 0 12%,#377d89 13% 68%,#285c6d 69%); box-shadow:inset -8px 0 #1c4554,0 7px 0 #0d0f13; }
+.arena-boxer .glove,.arena-boxer .off-glove { box-shadow:2px 2px 0 #594622; }
+.arena-message { font-size:.68rem; border-left-width:5px; }
+.arena-controls h4 { letter-spacing:.04em; }
+.arena-controls::after { content:'STAMINA ACTIVE · HEAVY AND DODGE USE ENERGY'; grid-column:1 / -1; color:#f6d56d; font-size:.48rem; letter-spacing:.06em; text-align:center; }

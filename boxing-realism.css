@@ -1,0 +1,13 @@
+/* Final character pass: clear hair, varied skin tones, and a readable guard. */
+.arena-boxer .hair { position:absolute; z-index:2; left:9px; top:-50px; width:49px; height:20px; border-radius:50% 55% 18% 18%; background:#211b1a; transform:rotate(-5deg); }
+.arena-boxer .hair::after { content:''; position:absolute; left:-4px; top:7px; width:13px; height:25px; border-radius:50%; background:inherit; }
+.arena-boxer.p1 .hair { background:#2d211d; }
+.arena-boxer.p2 .hair { background:#111827; transform:scaleX(-1) rotate(-5deg); }
+.arena-boxer.p1::before { background:linear-gradient(135deg,#c88763 0 60%,#75402f 61%); }
+.arena-boxer.p2::before { background:linear-gradient(135deg,#8e5b4b 0 60%,#4c2c2a 61%); }
+.arena-boxer.block::before { box-shadow:inset 5px -4px #8b4f3b, 0 0 0 4px #f6d35f; }
+.arena-boxer .guard-shield { position:absolute; z-index:6; left:-18px; top:5px; width:92px; height:100px; border:4px solid #f6d35f; border-radius:50%; opacity:0; transform:rotate(-15deg); pointer-events:none; background:radial-gradient(circle,#f6d35f42,#f6d35f0 68%); }
+.arena-boxer.block .guard-shield { opacity:1; animation:guardPulse .55s ease infinite alternate; }
+@keyframes guardPulse { from { filter:drop-shadow(0 0 2px #f6d35f); } to { filter:drop-shadow(0 0 12px #f6d35f); } }
+.arena-controls button.active { background:#f6d35f; color:#1c1810; border-color:#fff0a6; box-shadow:0 0 13px #f6d35f88; }
+.arena-message { border-left:4px solid #f6d35f; padding:8px 10px; background:#292318; }

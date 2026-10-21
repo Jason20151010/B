@@ -1,0 +1,15 @@
+/* Human-style boxer silhouettes: heads, faces, gloves, shorts, legs, and shoes. */
+.fight-actions button { position: relative; padding-top: 23px; }
+.fight-actions::before { content: 'KEYBOARD: J jab  ·  H heavy  ·  G guard  ·  D dodge'; grid-column: 1 / -1; color: var(--yellow); font-size: .55rem; line-height: 1.4; }
+.fight-actions button::after { content: 'J'; position: absolute; top: 6px; right: 7px; color: var(--blue); font-size: .55rem; border: 1px solid var(--blue); padding: 1px 4px; }
+#heavy::after { content: 'H'; }
+#guard::after { content: 'G'; }
+#dodge::after { content: 'D'; }
+.fight-actions button.key-pressed { transform: translateY(2px) scale(.97); box-shadow: 0 0 0 3px var(--blue); }
+.real-fight .fighter { height: 132px; width: 58px; border-radius: 26px 26px 15px 15px; background: linear-gradient(90deg,#5b2333 0 11%,#c94a61 12% 69%,#8f304b 70%); box-shadow: inset -7px 0 #71243c, 0 9px 0 #111827, 0 0 0 8px #f24f6820; }
+.real-fight .fighter::before { left: 7px; top: -43px; width: 44px; height: 48px; border-radius: 48% 48% 43% 43%; background: linear-gradient(135deg,#b87558 0 63%,#784331 64%); box-shadow: inset 5px -4px #8b4f3b; }
+.real-fight .fighter::after { content: ''; left: 14px; top: -16px; width: 8px; height: 5px; border-radius: 50%; background: #241e26; box-shadow: 15px 0 #241e26, 7px 13px 0 -1px #8a3f35; }
+.real-fight .fighter i { right: -35px; top: 29px; width: 28px; height: 28px; border-radius: 50%; background: var(--yellow); color: transparent; box-shadow: 4px 3px 0 #8b324d, -26px 73px 0 -5px #f5c28c; }
+.real-fight .rival { background: linear-gradient(90deg,#164c65 0 11%,#2d91ad 12% 69%,#1c607b 70%); box-shadow: inset -7px 0 #17485f, 0 9px 0 #111827, 0 0 0 8px #49cde820; }
+.real-fight .rival::before { background: linear-gradient(135deg,#8c5a49 0 63%,#5f352e 64%); }
+.real-fight .rival i { background: var(--pink); box-shadow: 4px 3px 0 #70243b, -26px 73px 0 -5px #d9a079; }

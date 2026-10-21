@@ -1,0 +1,43 @@
+.boxing-arena { color: #fff7d6; }
+.arena-setup { display:grid; gap:18px; text-align:center; padding:18px 4px 6px; }
+.arena-kicker { color:#f6d56d; font-size:.65rem; letter-spacing:.18em; }
+.arena-setup h3 { margin:0; color:#f8dc78; font:400 3rem/.9 'Bebas Neue'; text-shadow:3px 3px #5f4217; }
+.arena-setup p { color:#c9c0a4; font-size:.72rem; line-height:1.6; margin:0 auto; max-width:470px; }
+.arena-mode-row { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+.arena-mode,.arena-primary { border:1px solid #b58b2c; background:#2a2417; color:#f8dc78; padding:13px 17px; font:700 .65rem 'Space Mono'; cursor:pointer; }
+.arena-mode.active,.arena-primary { background:#d5a934; color:#1a1710; box-shadow:0 4px 0 #735313; }
+.arena-room { display:grid; gap:8px; margin:3px auto 0; max-width:280px; }
+.arena-room input { background:#16151a; border:1px solid #5d5339; color:#f8dc78; padding:12px; text-align:center; font:700 .75rem 'Space Mono'; letter-spacing:.15em; }
+.arena-room small,.arena-help { color:#9d967e; font-size:.57rem; line-height:1.6; }
+.arena-room[hidden] { display:none; }
+.boxing-arena .boxing-stage { background:radial-gradient(circle at 50% 30%,#776438 0,#342d26 34%,#17191e 78%); border-color:#aa8736; }
+.arena-ring { position:absolute; inset:0; background:linear-gradient(transparent 68%,#9b313d 69% 73%,#e0b84b 74% 76%,#9b313d 77% 81%,#28262a 82%); }
+.arena-rope { position:absolute; left:-4%; right:-4%; height:5px; background:#e7c04f; box-shadow:0 0 0 2px #6f421f; z-index:2; transform:rotate(-2deg); }
+.arena-rope.one{top:43%}.arena-rope.two{top:53%}.arena-rope.three{top:63%}
+.arena-corner { position:absolute; top:22%; bottom:17%; left:50%; width:9px; background:#d9b34d; transform:translateX(-50%); z-index:2; }
+.arena-boxer { position:absolute; z-index:3; bottom:28px; width:74px; height:132px; border-radius:36px 36px 14px 14px; background:linear-gradient(90deg,#59263b 0 13%,#d25a64 14% 68%,#802e43 69%); box-shadow:inset -9px 0 #66263b,0 11px 0 #0b0c10; transition:transform .12s; }
+.arena-boxer::before { content:''; position:absolute; left:12px; top:-48px; width:50px; height:53px; border-radius:48% 48% 43% 43%; background:linear-gradient(135deg,#bc7a59 0 62%,#73412f 63%); box-shadow:inset 6px -5px #8d4d38; }
+.arena-boxer::after { content:''; position:absolute; left:23px; top:-28px; width:8px; height:5px; border-radius:50%; background:#211a1a; box-shadow:18px 0 #211a1a,9px 14px 0 -1px #74382e; }
+.arena-boxer .glove { position:absolute; right:-32px; top:28px; width:31px; height:31px; border-radius:50%; background:#f2c647; box-shadow:4px 3px 0 #805c1c; }
+.arena-boxer .arm { position:absolute; right:-27px; top:48px; width:43px; height:14px; border-radius:12px; background:#d25a64; transform:rotate(-25deg); transform-origin:left center; }
+.arena-boxer .shorts { position:absolute; bottom:-1px; left:7px; right:7px; height:38px; background:#212c4c; border-top:5px solid #f1c74c; border-radius:5px 5px 11px 11px; }
+.arena-boxer .leg { position:absolute; bottom:-27px; width:20px; height:31px; background:#bc7a59; border-radius:0 0 10px 10px; }
+.arena-boxer .leg.left{left:12px}.arena-boxer .leg.right{right:12px}
+.arena-boxer .shoe { position:absolute; bottom:-32px; width:34px; height:10px; border-radius:10px 15px 4px 4px; background:#f4df9d; }
+.arena-boxer .shoe.left{left:3px}.arena-boxer .shoe.right{right:3px}
+.arena-boxer.p1 { left:18%; }.arena-boxer.p2 { right:18%; transform:scaleX(-1); background:linear-gradient(90deg,#153e58 0 13%,#2f9ab5 14% 68%,#1d5e79 69%); box-shadow:inset -9px 0 #17485f,0 11px 0 #0b0c10; }
+.arena-boxer.p2 .glove { background:#e55269; }.arena-boxer.p2 .arm{background:#2f9ab5}.arena-boxer.p2 .shorts{background:#51304c}.arena-boxer.p2 .shoe{background:#b5ecf1}
+.arena-boxer.hit { animation:arenaHit .22s ease; }.arena-boxer.block { filter:brightness(1.35); box-shadow:0 0 0 5px #f4d45b, inset -9px 0 #66263b,0 11px 0 #0b0c10; }
+.arena-boxer.attack { animation:arenaPunch .34s ease; }
+@keyframes arenaPunch { 45% { transform:translateX(22px) scale(1.04); filter:brightness(1.18); } }
+.arena-boxer.p2.attack { animation-name:arenaPunchP2; }
+@keyframes arenaPunchP2 { 45% { transform:scaleX(-1) translateX(22px) scale(1.04); filter:brightness(1.18); } }
+.arena-boxer.dodge { animation:arenaDodge .42s ease; }
+@keyframes arenaDodge { 45% { transform:translateX(-34px) rotate(-8deg); filter:brightness(1.25); } }
+.arena-boxer.p2.dodge { animation-name:arenaDodgeP2; }
+@keyframes arenaDodgeP2 { 45% { transform:scaleX(-1) translateX(-34px) rotate(8deg); filter:brightness(1.25); } }
+@keyframes arenaHit { 50%{transform:translateX(12px) rotate(2deg)} }.arena-boxer.p2.hit{animation-name:arenaHitP2}.arena-boxer.p2.block{box-shadow:0 0 0 5px #f4d45b,inset -9px 0 #17485f,0 11px 0 #0b0c10}@keyframes arenaHitP2{50%{transform:scaleX(-1) translateX(12px) rotate(-2deg)}}
+.arena-hud { position:absolute; z-index:5; top:12px; left:15px; right:15px; display:flex; justify-content:space-between; gap:20px; font-size:.55rem; font-weight:700; }
+.arena-health { width:38%; }.arena-health.enemy{text-align:right}.arena-health label{color:#f8dc78}.arena-bar{height:13px; margin-top:5px; background:#141419; border:2px solid #f0d27a}.arena-bar i{display:block; width:100%; height:100%; background:#e45668; transition:.2s}.arena-health.enemy .arena-bar i{margin-left:auto;background:#48c7dc}
+.arena-message { min-height:35px; color:#f3e8bd; font-size:.64rem; line-height:1.5; }
+.arena-controls { display:grid; grid-template-columns:1fr 1fr; gap:9px; margin-top:12px; }.arena-controls h4{grid-column:1/-1;margin:0;color:#f8dc78;font:400 1.45rem 'Bebas Neue'}.arena-controls button{padding:10px 8px;border:1px solid #625332;background:#211f1c;color:#fff7d6;font:700 .58rem 'Space Mono';cursor:pointer}.arena-controls button:hover{border-color:#f2d36c}.arena-controls button:active{transform:scale(.96)}.arena-controls small{display:block;color:#9d967e;font-size:.46rem;margin-top:4px}.arena-bottom{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:12px;color:#a69c80;font-size:.55rem}.arena-gold{color:#f6d56d}.arena-room-code{font-size:.8rem;letter-spacing:.2em;color:#f8dc78}.arena-controls[hidden]{display:none}@media(max-width:650px){.arena-boxer.p1{left:13%}.arena-boxer.p2{right:13%}.arena-controls{grid-template-columns:1fr 1fr}}

@@ -1,0 +1,16 @@
+/* Human character pass: oval anatomy, necks, ears, hairline, and facial detail. */
+.arena-boxer { border-radius:28px 28px 12px 12px; }
+.arena-boxer::before { left:9px; top:-51px; width:42px; height:54px; border-radius:46% 46% 43% 43%; border:1px solid #643c31; box-shadow:inset 5px -7px #75402f; }
+.arena-boxer::after { left:18px; top:-28px; width:7px; height:5px; border-radius:50%; background:#231b1a; box-shadow:16px 0 #231b1a, 7px 13px 0 -1px #7c3f32; }
+.arena-boxer .neck { position:absolute; z-index:-1; left:20px; top:-5px; width:25px; height:20px; border-radius:0 0 10px 10px; background:#a9654e; }
+.arena-boxer.p2 .neck { background:#7b4b40; }
+.arena-boxer .hair { left:5px; top:-55px; width:50px; height:23px; border-radius:56% 62% 22% 16%; background:#211a19; transform:rotate(-4deg); box-shadow:0 6px 0 -2px #211a19, 18px -4px 0 -3px #211a19; }
+.arena-boxer .hair::after { left:-5px; top:9px; width:12px; height:29px; border-radius:70% 20% 50% 50%; background:inherit; box-shadow:42px 3px 0 -2px #211a19; }
+.arena-boxer .face-detail { position:absolute; z-index:3; left:12px; top:-18px; width:7px; height:3px; border-radius:50%; background:#9a5542; box-shadow:16px 0 #9a5542; }
+.arena-boxer .face-detail::after { content:''; position:absolute; left:10px; top:8px; width:9px; height:4px; border-bottom:1px solid #6f352f; border-radius:0 0 9px 9px; }
+.arena-boxer.p2 .face-detail { background:#5e392f; box-shadow:16px 0 #5e392f; }
+.arena-boxer.p1[data-face="smile"] .face-detail::after { height:7px; border-bottom:2px solid #6f352f; }
+.arena-boxer.p1[data-face="scar"] .face-detail::before { content:''; position:absolute; left:7px; top:-9px; width:2px; height:12px; background:#7b4338; transform:rotate(25deg); }
+.arena-boxer.p1[data-face="mask"] .face-detail { left:7px; top:-22px; width:32px; height:13px; border-radius:4px; background:#e8e2ca; box-shadow:none; }
+.arena-boxer .off-arm,.arena-boxer .arm { height:16px; border-radius:14px; }
+.arena-boxer .shorts { height:35px; border-radius:4px 4px 8px 8px; }

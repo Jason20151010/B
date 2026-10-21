@@ -1,0 +1,31 @@
+/* Arcade menu polish: stronger hierarchy, cabinet glow, and clearer calls to play. */
+body::before { content:'ARCADE FLOOR // LIVE'; position:fixed; top:96px; right:24px; z-index:0; color:#f5e44918; font-size:.55rem; letter-spacing:.22em; transform:rotate(90deg); transform-origin:right top; pointer-events:none; }
+.topbar { border-bottom:1px solid #6c5a35; background:linear-gradient(180deg,#11131aee,#11131a99); backdrop-filter:blur(8px); }
+.brand-mark { box-shadow:0 0 18px #ff4f7155,4px 4px 0 #77243d; }
+.wallet { padding:10px 13px; border:1px solid #75632c; background:#252317; box-shadow:inset 0 0 14px #f5e44912; border-radius:3px; }
+.hero { position:relative; z-index:1; min-height:570px; }
+.hero-copy { max-width:560px; }
+.hero-copy::before { content:'PLAYER 1 READY'; display:inline-block; margin-bottom:22px; padding:6px 9px; border:1px solid #49cde866; color:#49cde8; font-size:.53rem; letter-spacing:.16em; }
+.hero h1 { text-shadow:0 0 26px #ff4f7120; }
+.hero h1 em { text-shadow:5px 5px 0 #72253d,0 0 25px #ff4f714c; }
+.button.hot { box-shadow:5px 5px 0 #866e18,0 0 22px #f5e44925; transition:transform .15s,box-shadow .15s; }
+.button.hot:hover { box-shadow:2px 2px 0 #866e18,0 0 30px #f5e44955; }
+.hero-machine { box-shadow:13px 13px 0 #0a0b10,0 0 40px #49cde81c; }
+.games-section { position:relative; }
+.games-section::before { content:'01  /  02  /  03'; position:absolute; right:0; top:37px; color:#f5e44955; font-size:.55rem; letter-spacing:.2em; }
+.game-card { position:relative; border-color:#5b564d; box-shadow:0 10px 0 #0a0b10; transition:transform .2s,border-color .2s,box-shadow .2s; }
+.game-card:hover { transform:translateY(-7px); border-color:#f5e449; box-shadow:0 16px 0 #0a0b10,0 0 22px #f5e4491c; }
+.card-top { background:#181a22; border-bottom:1px solid #383946; }
+.card-content { min-height:140px; background:linear-gradient(180deg,#20222c,#1b1c25); }
+.card-content h3 { color:#fff8e1; letter-spacing:.04em; }
+.button.small { box-shadow:3px 3px 0 #11131a; transition:transform .15s; }
+.button.small:hover { transform:translate(-2px,-2px); }
+.how { position:relative; background:linear-gradient(90deg,#191a22aa,#26221555,#191a22aa); }
+.how-icon { box-shadow:4px 4px 0 #826c19,0 0 18px #f5e44933; }
+.shop { position:relative; }
+.shop::after { content:'COLLECT // EQUIP // FIGHT'; position:absolute; right:0; bottom:34px; color:#49cde866; font-size:.5rem; letter-spacing:.16em; }
+.skin { transition:transform .18s,border-color .18s; }
+.skin:hover { transform:translateY(-4px); border-color:#49cde8; }
+.skin-preview { border:1px solid #4d4c56; box-shadow:inset 0 0 22px #0008; }
+footer { border-top:1px solid #2e3038; }
+@media(max-width:760px){body::before,.games-section::before,.shop::after{display:none}.hero-copy::before{margin-top:8px}.wallet{padding:8px}.game-card{box-shadow:0 6px 0 #0a0b10}}
