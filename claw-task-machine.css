@@ -19,3 +19,20 @@
 @keyframes confettiFall { to { top:110%; transform:translateY(100vh) rotate(720deg); opacity:.15; } }
 .todo-item input:disabled { opacity:1; cursor:not-allowed; }
 .todo-item:has(input:disabled:not(:checked)):hover { transform:none; border-color:#3f4149; }
+.hero-copy, #how, nav .nav-link[href="#how"] { display:none !important; }
+.hero { grid-template-rows:1fr; padding-top:28px; }
+.machine-base { flex-wrap:wrap; }
+.claw-move { border:1px solid #4d5059; background:#171820; color:#f5e449; min-width:32px; height:32px; cursor:pointer; font:700 .7rem 'Space Mono'; }
+.claw-move:hover { background:#f5e449; color:#11131a; }
+.confetti-layer { z-index:2147483647 !important; }
+.hero-missions { min-width:0; }
+.hero-missions .todo-head { align-items:flex-start; }
+.hero-missions .todo-list { width:100%; }
+.hero-missions .todo-item { grid-template-columns:24px minmax(0,1fr) auto; text-align:left; min-width:0; }
+.hero-missions .todo-item input { position:static; opacity:1; pointer-events:none; width:18px; height:18px; margin:0; accent-color:#f5e449; }
+.hero-missions .todo-item span { min-width:0; text-align:left; }
+.hero-missions .todo-item b, .hero-missions .todo-item small { text-align:left; overflow-wrap:anywhere; }
+.hero-missions .todo-remove { justify-self:end; }
+.add-task-form { display:flex; gap:8px; width:100%; margin:0 0 14px; }
+.add-task-form input { flex:1; min-width:0; padding:11px 12px; border:1px solid #4d5059; background:#11131a; color:#f6f0df; font:600 .62rem 'Space Mono'; }
+.add-task-form button { flex:0 0 auto; }
