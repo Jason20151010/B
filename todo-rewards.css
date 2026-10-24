@@ -4,6 +4,7 @@
 .todo-head p:not(.eyebrow) { color:#a7a4a2; font-size:.65rem; line-height:1.5; margin:8px 0 0; }
 .todo-progress { color:#f5e449; font-size:.58rem; letter-spacing:.12em; white-space:nowrap; }
 .todo-list { display:grid; gap:8px; }
+.todo-add { display:flex; gap:8px; margin-bottom:12px; }.todo-add input { flex:1; min-width:0; padding:11px 12px; border:1px solid #4d5059; background:#11131a; color:#f6f0df; font:600 .62rem 'Space Mono'; }.todo-add button,.todo-remove { border:1px solid #75632c; background:#332b16; color:#f5e449; font:700 .55rem 'Space Mono'; cursor:pointer; }.todo-add button { padding:0 12px; }.todo-add button:hover,.todo-remove:hover { background:#f5e449; color:#11131a; }
 .todo-item { display:grid; grid-template-columns:20px 28px 1fr auto; align-items:center; gap:10px; padding:12px; border:1px solid #3f4149; background:#171820; cursor:pointer; transition:border-color .15s,transform .15s; }
 .todo-item:hover { border-color:#f5e449; transform:translateX(3px); }
 .todo-item input { position:absolute; opacity:0; pointer-events:none; }
@@ -11,6 +12,7 @@
 .todo-item.done { border-color:#5ce26a; background:#17221d; }.todo-item.done .todo-check { background:#5ce26a; color:#11131a; border-color:#5ce26a; }
 .todo-item b { display:block; color:#f6f0df; font-size:.66rem; }.todo-item small { display:block; margin-top:4px; color:#8f8d8b; font-size:.55rem; }
 .todo-item em { color:#49cde8; font-style:normal; font-size:.5rem; letter-spacing:.08em; text-align:right; }
+.todo-remove { width:24px; height:24px; border-color:#713d4a; color:#ff7182; font-size:1rem; line-height:1; }
 [data-game].locked-game { position:relative; filter:grayscale(.5); opacity:.62; cursor:not-allowed; }
 [data-game].locked-game::after { content:'🔒 ' attr(data-lock-label); display:block; margin-top:4px; color:#f5e449; font-size:.48rem; }
 @media(max-width:760px){.todo-head{align-items:start;flex-direction:column}.todo-item{grid-template-columns:20px 28px 1fr}.todo-item em{grid-column:3;text-align:left;margin-top:4px}.todo-board{padding:18px}.todo-head h2{font-size:2rem}}
