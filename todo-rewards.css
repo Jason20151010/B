@@ -13,6 +13,7 @@
 .todo-item b { display:block; color:#f6f0df; font-size:.66rem; }.todo-item small { display:block; margin-top:4px; color:#8f8d8b; font-size:.55rem; }
 .todo-item em { color:#49cde8; font-style:normal; font-size:.5rem; letter-spacing:.08em; text-align:right; }
 .todo-remove { width:24px; height:24px; border-color:#713d4a; color:#ff7182; font-size:1rem; line-height:1; }
+.task-claw { text-align:center; padding:18px 6px; }.task-claw h2 { color:#f5e449; font:400 2.8rem 'Bebas Neue'; margin:0 0 18px; }.task-claw p:not(.eyebrow) { color:#c9c0a4; font-size:.7rem; line-height:1.6; }.task-claw small { display:block; color:#9d967e; font-size:.55rem; margin:16px 0; }.picked-task { padding:24px 14px; border:2px solid #f5e449; background:#302914; color:#fff4bd; font:400 2.2rem 'Bebas Neue'; box-shadow:0 0 24px #f5e44933; }
 [data-game].locked-game { position:relative; filter:grayscale(.5); opacity:.62; cursor:not-allowed; }
 [data-game].locked-game::after { content:'🔒 ' attr(data-lock-label); display:block; margin-top:4px; color:#f5e449; font-size:.48rem; }
 @media(max-width:760px){.todo-head{align-items:start;flex-direction:column}.todo-item{grid-template-columns:20px 28px 1fr}.todo-item em{grid-column:3;text-align:left;margin-top:4px}.todo-board{padding:18px}.todo-head h2{font-size:2rem}}
