@@ -1,0 +1,5 @@
+.confetti-layer { position: fixed; inset: 0; z-index: 100; pointer-events: none; overflow: hidden; }
+.confetti-layer i { position: absolute; top: -20px; width: 9px; height: 15px; border-radius: 2px; animation: confettiFall 1.8s linear forwards; }
+@keyframes confettiFall { to { top: 110%; transform: translateY(100vh) rotate(720deg); opacity: .15; } }
+.todo-item input:disabled { opacity: 1; cursor: not-allowed; }
+.todo-item:has(input:disabled:not(:checked)):hover { transform: none; border-color: #3f4149; }
